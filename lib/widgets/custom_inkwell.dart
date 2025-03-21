@@ -1,19 +1,14 @@
-
+// import 'package:car_rental_system/core/util/route_generator.dart';
 import 'package:car_rental_system/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomInkwell extends StatelessWidget {
-  String data;
-  Widget Function(BuildContext) builder;
-   CustomInkwell({super.key,required this.data,required this.builder});
+  Function()? onTap;
+  Widget? child;
+  CustomInkwell({super.key,this.onTap,this.child});
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      child:CustomText(data:data) ,
-      onTap: () {
-        Navigator.pushAndRemoveUntil(context,MaterialPageRoute(builder:builder ),(Route<dynamic> route) => false);
-      },
-    );
+    return InkWell(onTap: onTap, child:child );
   }
 }

@@ -1,4 +1,4 @@
-package com.example.car_rental_system
+package com.manira.app
 
 import io.flutter.embedding.android.FlutterActivity
 

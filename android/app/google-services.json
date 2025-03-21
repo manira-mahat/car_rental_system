@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "339901482541",
+    "project_id": "car-rental-system-61f97",
+    "storage_bucket": "car-rental-system-61f97.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:339901482541:android:96c0331d103a9c816e5aa4",
+        "android_client_info": {
+          "package_name": "com.manira.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDyHybOY7A5a555WosratlkOl1zdZX8kfo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

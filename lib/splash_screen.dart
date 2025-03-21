@@ -1,3 +1,5 @@
+import 'package:car_rental_system/core/util/route_const.dart';
+import 'package:car_rental_system/core/util/route_generator.dart';
 import 'package:car_rental_system/core/util/string_utils.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -11,6 +13,15 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   @override
+
+  void initState() {
+    super.initState();
+    // Navigate to next screen after 3 seconds
+    Future.delayed(const Duration(seconds: 2), () {
+      RouteGenerator.navigateToPage(context, Routes.getStartedRoute);
+    });
+  }
+  
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
