@@ -52,7 +52,7 @@ class _GetStartedState extends State<GetStarted> {
                       CustomElevatedbutton(onPressed: (){
 RouteGenerator.navigateToPage(context, Routes.signupRoute);
                       },
-                       child: Text(registerStr)),
+                       child: Text(registerStr,style: TextStyle(color: Colors.white),)),
                         SizedBox(
                           height:  30,
                       ),
