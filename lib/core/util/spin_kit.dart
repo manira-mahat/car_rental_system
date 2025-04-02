@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:car_rental_system/core/util/color_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
@@ -10,7 +11,7 @@ class Loader {
       child: Stack(
         children: [
           const Center(
-            child: SpinKitCircle(color: Colors.blue),
+            child: SpinKitCircle(color: primaryColor),
           ),
           Container(
             height: MediaQuery.of(context).size.height,
