@@ -1,5 +1,6 @@
 import 'package:car_rental_system/core/util/route_const.dart';
 import 'package:car_rental_system/get_started.dart';
+import 'package:car_rental_system/login.dart';
 import 'package:car_rental_system/signup.dart';
 // import 'package:car_rental_system/login.dart';
 // import 'package:car_rental_system/role_selection.dart';
@@ -24,8 +25,8 @@ class RouteGenerator {
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      // case Routes.loginRoute:
-      //   return MaterialPageRoute(builder: (_) => const LoginPgae());
+      case Routes.loginRoute:
+        return MaterialPageRoute(builder: (_) => const Login());
       case Routes.signupRoute:
         return MaterialPageRoute(builder: (_) =>  Signup());
       // case Routes.roleSelectionRoute:
