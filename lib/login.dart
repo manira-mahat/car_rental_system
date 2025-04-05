@@ -1,6 +1,11 @@
+import 'package:car_rental_system/core/util/color_utils.dart';
+import 'package:car_rental_system/core/util/route_const.dart';
+import 'package:car_rental_system/core/util/route_generator.dart';
 import 'package:car_rental_system/core/util/string_utils.dart';
+import 'package:car_rental_system/widgets/custom_back_page_icon.dart';
 import 'package:car_rental_system/widgets/custom_elevatedbutton.dart';
 import 'package:car_rental_system/widgets/custom_image_assets.dart';
+import 'package:car_rental_system/widgets/custom_inkwell.dart';
 import 'package:car_rental_system/widgets/custom_text.dart';
 import 'package:car_rental_system/widgets/custom_textformfield.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,27 +19,33 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
+  final TextEditingController _emailAddressController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   bool visible = false;
+   bool rememberMe = false;
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(onPressed: () {}, icon: Icon(Icons.arrow_back)),
-      ),
+      
       body: Form(
         key: _formKey,
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+             crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                 SizedBox(height: 20),
+            CustomBackPageIcon(),
+            SizedBox(height: 20),
                 SizedBox(height: 20),
-                CustomText(
-                  data: welcomeBackStr,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
+                Center(
+                  child: CustomText(
+                    data: welcomeBackStr,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                  ),
                 ),
                 SizedBox(height: 20),
                 CustomText(
@@ -42,7 +53,17 @@ class _LoginState extends State<Login> {
                   fontWeight: FontWeight.bold,
                   fontSize: 20,
                 ),
-                CustomTextformfield(labelText: emailAddressPlaceStr),
+                CustomTextformfield(
+                  controller: _emailAddressController,
+                  labelText: emailAddressPlaceStr,
+                  validator: (p0) {
+                    if(p0==null||p0.isEmpty){
+                      return validateEmailAddressStr;
+                    }else if(!emailRegex.hasMatch(p0)){
+                      return validateEmailAddressRegexStr;
+                    }
+                    return null;
+                  },),
                 SizedBox(height: 20),
                 CustomText(
                   data: passwordStr,
@@ -50,7 +71,16 @@ class _LoginState extends State<Login> {
                   fontSize: 20,
                 ),
                 CustomTextformfield(
+                  controller: _passwordController,
                   labelText: passwordPlaceStr,
+                  validator:(p0) {
+                    if(p0==null||p0.isEmpty){
+                      return validatePasswordStr;
+                    }else if(!passwordRegex.hasMatch(p0)){
+                      return validatePasswordRegexStr;
+                    }
+                    return null;
+                  },
                   obscureText: visible ? true : false,
                   suffixIcon: IconButton(
                     onPressed: () {
@@ -67,7 +97,13 @@ class _LoginState extends State<Login> {
 
                 Row(
                   children: [
-                    IconButton(onPressed: () {}, icon: Icon(Icons.check_box)),
+                    Checkbox(value: rememberMe,
+                     onChanged: (bool? value){
+                      setState(() {
+                        rememberMe=value!?true:false;
+                      });
+                     }
+                     ),
                     CustomText(
                       data: rememberMeStr,
                       fontSize: 15,
@@ -84,8 +120,12 @@ class _LoginState extends State<Login> {
                 ),
                 SizedBox(height: 20),
                 CustomElevatedbutton(
-                  onPressed: () {},
-                  child: CustomText(data: loginStr, color: Colors.white),
+                  onPressed: () {
+                     RouteGenerator.navigateToPage(context, Routes.buttomNavbarRoute);
+                  },
+                  child: CustomText(
+                    data: loginStr,
+                     color: Colors.white),
                 ),
                 SizedBox(height: 20),
                 Row(
@@ -109,10 +149,29 @@ class _LoginState extends State<Login> {
                       onPressed: () {},
                       width: MediaQuery.of(context).size.width * 0.25,
                       backgroundColor: Colors.white,
-                      child: CustomImageAssets(name: facebookLogoPath),
+                      child: CustomImageAssets(name: facebookLogoPath,
+                      height: 40,),
                     ),
                   ],
                 ),
+                
+                SizedBox(height: 20),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    CustomText(data: dontHaveAccountStr),
+                    CustomInkwell(
+                      child: CustomText(
+                        data: registerStr,
+                        color: primaryColor,
+                      ),
+                      onTap: () {
+                        RouteGenerator.navigateToPage(
+                            context, Routes.signupRoute);
+                      },
+                    )
+                  ],
+                )
               ],
             ),
           ),

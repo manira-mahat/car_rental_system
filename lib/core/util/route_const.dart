@@ -7,4 +7,7 @@ class Routes {
   // static const welcomeDriverRoute="/welcomeDriver";
   static const welcomeRoute="/welcome";
   static const assignmentDetailsRoute = "/assignmentDetails";
+static const buttomNavbarRoute ="/buttomNavbar";
+static const homeRoute="/home";
+static const addCarDetailsRoute="/addCarDetails";
 }
