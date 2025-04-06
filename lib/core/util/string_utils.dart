@@ -57,3 +57,57 @@ const String newPasswordStr="New Password";
 const String confirmPasswordStr="Confirm Password";
 const String resetPasswordStr="Reset Password";
 const String passwordDidntMatchStr="Password didn't match";
+
+//home page strings
+const String locationStr="Location";
+const String searchCarBarStr="Search Car....";
+const String topBrandsStr="Top Brands";
+const String popularCarStr="Popular Car";
+const String seeAllStr="See All";
+const String manualTypeStr="Manual";
+const String automaticTypeStr="Auto";
+const String rentalNowStr="Rental Now";
+
+//car detail page strings
+const String carDetailStr="Car Details";
+const String aboutStr="About";
+const String galleryStr="Gallery";
+const String reviewStr="Review";
+const String rentPartnerStr="Rent Partner";
+const String ownerStr="Owner";
+const String descriptionStr="Description";
+const String rentNowStr="Rent Now";
+const String priceStr="Price";
+const String perDayStr="/ day";
+
+// add car form page
+const String addCarDetailsStr="Add Car Details";
+const String carNameLabelStr="Car Name";
+const String carImageLabelStr="Car Image";
+const String carLogoLabelStr="Car Logo";
+const String carBrandLabelStr="Car Brand";
+const String carTypeLabelStr="Car Type";
+const String totalPassengerCapacityLabelStr="Passenger Capacity";
+const String fuelCapacityLabelStr="Fuel Capacity";
+const String priceLabelStr="Rent Price";
+
+const String carNameHintStr="Enter Car Name";
+const String carImageHintStr="Enter Car Image";
+const String carLogoHintStr="Enter Car Logo";
+const String carBrandHintStr="Enter Brand";
+const String carTypeHintStr="Enter Car Type";
+const String totalPassengerCapacityHintStr="Enter Passenger Capacity";
+const String fuelCapacityHintStr="Enter Fuel Capacity";
+const String priceHintStr="Enter Rent Price";
+
+const String carNameValidateString = "Please enter car name";
+const String carImageValidateString = "Please enter car image";
+const String carLogoValidateString = "Please enter car logo";
+const String carBrandValidateString = "Please enter car brand";
+const String carTypeValidateString = "Please enter car type";
+const String totalPassengerCapacityValidateString = "Please enter total passenger capacity";
+const String fuelCapacityValidateString = "Please enter total fuel capacity";
+const String priceValidateString = "Please enter rent price";
+const String submitStr="Submit";
+const String carDetailsAddedSuccessStr="Car Details Added successfully";
+const String carDetailsAddedFailStr="Failed to add Car Details ";
