@@ -144,6 +144,7 @@ TopBrandCars(
                       flex: 6,
                        child: CustomSearchbar(
                         hintText: searchCarBarStr,
+                         readOnly: true,
                        ),
                      ),
                      SizedBox(
@@ -178,7 +179,7 @@ TopBrandCars(
                     width: MediaQuery.of(context).size.width,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      itemCount: topBrandsStr.length,
+                      itemCount: topBrandsCarsList.length,
                       itemBuilder: (context,index){
                     return Padding(
                       padding: const EdgeInsets.all(8.0),

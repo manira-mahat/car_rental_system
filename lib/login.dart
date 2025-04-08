@@ -121,7 +121,7 @@ class _LoginState extends State<Login> {
                 SizedBox(height: 20),
                 CustomElevatedbutton(
                   onPressed: () {
-                     RouteGenerator.navigateToPage(context, Routes.buttomNavbarRoute);
+                     RouteGenerator.navigateToPageWithoutStack(context, Routes.buttomNavbarRoute);
                   },
                   child: CustomText(
                     data: loginStr,
