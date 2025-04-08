@@ -10,4 +10,5 @@ class Routes {
 static const buttomNavbarRoute ="/buttomNavbar";
 static const homeRoute="/home";
 static const addCarDetailsRoute="/addCarDetails";
+static const viewCarListRoute="/viewCarList";
 }
