@@ -98,7 +98,7 @@ class _SignupState extends State<Signup> {
                 height: 15,
               ),
               CustomElevatedbutton(onPressed: (){
-            
+            // if(_formKey.currentState!valida)
               }, child: Text(registerStr ,style: TextStyle(color: Colors.white),)),
               SizedBox(
                 height: 20,
