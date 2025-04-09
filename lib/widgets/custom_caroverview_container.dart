@@ -68,7 +68,7 @@ class CustomCarOverviewContainer extends StatelessWidget {
                   fit: BoxFit.contain,
                 ),
                 const Spacer(),
-                CustomIcons(icon: Icons.favorite),
+                CustomIcons(icon: Icons.favorite, color: primaryColor ),
               ],
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.01),
@@ -146,6 +146,7 @@ class CustomCarOverviewContainer extends StatelessWidget {
                   ),
                   Expanded(
                     child: CustomElevatedbutton(
+                      backgroundColor: primaryColor,
                       onPressed:onPressed,
                       child: const Text(
                         rentalNowStr,

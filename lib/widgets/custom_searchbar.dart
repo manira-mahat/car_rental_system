@@ -7,7 +7,7 @@ class CustomSearchbar extends StatefulWidget {
   bool? readOnly;
   Function()? onTap;
   void Function(String)? onChanged;
-  CustomSearchbar({super.key, this.hintText, this.onChanged, this.onTap});
+  CustomSearchbar({super.key, this.hintText, this.onChanged, this.onTap,this.readOnly});
 
   @override
   State<CustomSearchbar> createState() => _CustomSearchbarState();
@@ -25,8 +25,8 @@ class _CustomSearchbarState extends State<CustomSearchbar> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      readOnly: false,
-      onTap: (){},
+      readOnly:widget.readOnly ?? false,
+      onTap: widget.onTap,
       focusNode: _focusNode,
       onChanged: widget.onChanged,
       decoration: InputDecoration(

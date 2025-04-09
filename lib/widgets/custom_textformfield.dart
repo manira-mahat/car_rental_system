@@ -23,24 +23,32 @@ class CustomTextformfield extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 10),
-      child: TextFormField(
-        controller: controller,
-        keyboardType:keyboardType ??TextInputType.text ,
-        autovalidateMode: AutovalidateMode.onUserInteraction,
-        validator: validator,
-        obscureText:obscureText??false ,
-        decoration: InputDecoration(
-          labelText:labelText ,
-            hintText:hintText,
-              hintStyle:const TextStyle(color: greyColor),
-              alignLabelWithHint: true,
-          suffixIcon: suffixIcon,
-          prefixIcon: prefixIcon,
-          border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(5)
-          )
-        ),
+         padding: const EdgeInsets.symmetric(horizontal: 5.0,vertical: 10),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(labelText!,
+          style: TextStyle(fontSize: 16,fontWeight: FontWeight.w500),),
+          SizedBox(height: 5,),
+          TextFormField(
+            controller: controller,
+            keyboardType:keyboardType ??TextInputType.text ,
+            autovalidateMode: AutovalidateMode.onUserInteraction,
+            validator: validator,
+            obscureText:obscureText??false ,
+            decoration: InputDecoration(
+              // labelText:labelText ,
+                hintText:hintText,
+                  hintStyle:const TextStyle(color: greyColor),
+                  alignLabelWithHint: true,
+              suffixIcon: suffixIcon,
+              prefixIcon: prefixIcon,
+              border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5)
+              )
+            ),
+          ),
+        ],
       ),
     );
   }

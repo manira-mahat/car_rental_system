@@ -145,6 +145,7 @@ TopBrandCars(
                      Flexible(
                       flex: 6,
                        child: CustomSearchbar(
+                        readOnly: true,
                         hintText: searchCarBarStr,
                          onTap: (){
                           RouteGenerator.navigateToPage(context, Routes.viewCarListRoute );
@@ -192,7 +193,7 @@ TopBrandCars(
                           CircleAvatar(
                             radius: 35,
                             backgroundColor:const Color.fromARGB(97, 223, 176, 176) ,
-                            child: Image.network(topBrandsCarsList[index].image),
+                            backgroundImage: NetworkImage(topBrandsCarsList[index].image)
                           ),
                           SizedBox(
                             height: 2,
@@ -238,6 +239,9 @@ TopBrandCars(
                           carType: carsList[index].carType ?? "",
                           numberOfPeople: carsList[index].passengerCapacity ?? "",
                           price: carsList[index].rentPrice ?? "",
+                          onPressed: (){
+
+                          },
 );
                     }
                     ),

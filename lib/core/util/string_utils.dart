@@ -111,3 +111,6 @@ const String priceValidateString = "Please enter rent price";
 const String submitStr="Submit";
 const String carDetailsAddedSuccessStr="Car Details Added successfully";
 const String carDetailsAddedFailStr="Failed to add Car Details ";
+
+//view car details string
+const String viewCarDetailsStr="View Car Details";
