@@ -114,3 +114,12 @@ const String carDetailsAddedFailStr="Failed to add Car Details ";
 
 //view car details string
 const String viewCarDetailsStr="View Car Details";
+
+//view car list screen
+const String carListStr="Car List";
+const String noCarFoudStr="No Car Found in the list";
+const String deleteCarConfirmTitleStr="Delete Car";
+const String deleteCarConfirmMessageStr="Do your really want to delete Car: ";
+const String deleteCarSuccessMessageStr="Successfully deleted Car:";
+const String deleteCarFailedStr="Failed to delete Car: ";
+const String failedToFetchCar="Failed to fetch Car Details";
