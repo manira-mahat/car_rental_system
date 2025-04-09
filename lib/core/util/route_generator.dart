@@ -43,8 +43,8 @@ class RouteGenerator {
       return MaterialPageRoute(builder: (_) => const Home());
       case Routes.addCarDetailsRoute:
       return MaterialPageRoute(builder: (_) => const AddCarForm());
-      case Routes.viewCarListScreenRoute:
-      return MaterialPageRoute(builder: (_) => const ViewCarListScreen());
+      case Routes.viewCarListRoute:
+      return MaterialPageRoute(builder: (_)=> const ViewCarListScreen() );
       default:
 
         return MaterialPageRoute(

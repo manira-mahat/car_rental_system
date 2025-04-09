@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ViewCarListScreen extends StatefulWidget {
@@ -12,7 +11,7 @@ class _ViewCarListScreenState extends State<ViewCarListScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
+      body: Stack(
         children: [
           
         ],

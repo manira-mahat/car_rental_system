@@ -1,5 +1,6 @@
 import 'package:car_rental_system/core/util/color_utils.dart';
 import 'package:car_rental_system/core/util/display_snackbar.dart';
+import 'package:car_rental_system/core/util/route_const.dart';
 import 'package:car_rental_system/core/util/route_generator.dart';
 import 'package:car_rental_system/core/util/string_utils.dart';
 import 'package:car_rental_system/model/car.dart';
@@ -145,9 +146,8 @@ TopBrandCars(
                       flex: 6,
                        child: CustomSearchbar(
                         hintText: searchCarBarStr,
-                         readOnly: true,
-                         onTap: () {
-                          //  RouteGenerator.navigateToPage(context, route)
+                         onTap: (){
+                          RouteGenerator.navigateToPage(context, Routes.viewCarListRoute );
                          },
                        ),
                      ),
