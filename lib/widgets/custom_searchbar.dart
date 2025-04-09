@@ -5,8 +5,9 @@ import 'package:flutter/material.dart';
 class CustomSearchbar extends StatefulWidget {
   String? hintText;
   bool? readOnly;
+  Function()? onTap;
   void Function(String)? onChanged;
-  CustomSearchbar({super.key, this.hintText, this.onChanged});
+  CustomSearchbar({super.key, this.hintText, this.onChanged, this.readOnly, this.onTap});
 
   @override
   State<CustomSearchbar> createState() => _CustomSearchbarState();
@@ -24,7 +25,7 @@ class _CustomSearchbarState extends State<CustomSearchbar> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
-      readOnly: true,
+     onTap: (){},
       focusNode: _focusNode,
       onChanged: widget.onChanged,
       decoration: InputDecoration(
