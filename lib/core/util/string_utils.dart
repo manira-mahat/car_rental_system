@@ -139,5 +139,15 @@ const String carNameStr="Car";
 const String seatsStr="Seats";
 const String downloadStr="Download";
 
-//profile page str
+//chat page and profile page strings
 const String profileStr="Profile";
+const String chatStr="Chat";
+const String searchChatStr="Search chat, people and more ...";
+const String editProfileStr="Edit Profile";
+const String licenseStr="License";
+const String passportStr="Passport";
+const String paymentMethodsStr="Payment Methods";
+const String myBookingStr="My Booking";
+const String settingStr="Settings";
+const String logoutStr="Logout";
+const String logoutConfirmStr="Do you really want to Logout?";
