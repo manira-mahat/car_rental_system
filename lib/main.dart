@@ -1,5 +1,5 @@
+import 'package:car_rental_system/bottom_navbar.dart';
 import 'package:car_rental_system/firebase_options.dart';
-import 'package:car_rental_system/home.dart';
 import 'package:car_rental_system/splash_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
        
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home:Home(),
+      home:BottomNavbar1(),
     );
   }
 }

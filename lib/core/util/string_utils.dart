@@ -4,6 +4,7 @@ const String splashLogoPath="assets/images/splashLogo.png";
 const String letsStartImagePath="assets/images/lets_start.png";
 const String googleLogoPath="assets/images/google_logo.png";
 const String facebookLogoPath="assets/images/facebook_logo.png";
+const String profileLogoPath="assets/images/gir.jpg";
 // const String createAccountStr="Create Account";
 
 const String getStartedTitleStr="Lets get Started";
@@ -114,3 +115,29 @@ const String carDetailsAddedFailStr="Failed to add Car Details ";
 
 //view car details string
 const String viewCarDetailsStr="View Car Details";
+const String carPlaceholderImageUrl="https://www.shutterstock.com/image-vector/car-logo-icon-emblem-design-600nw-473088025.jpg";
+
+//dialogBox str
+const String confirmStr="Confirm";
+const String cancelStr="Cancel";
+const String okStr="Ok";
+const String yesStr="Yes";
+const String noStr="No";
+
+//view car list screen
+const String carListStr="Car List";
+const String noCarFoudStr="No Car Found in the list";
+const String deleteCarConfirmTitleStr="Delete Car";
+const String deleteCarConfirmMessageStr="Do your really want to delete Car: ";
+const String deleteCarSuccessMessageStr="Successfully deleted Car:";
+const String deleteCarFailedStr="Failed to delete Car: ";
+const String failedToFetchCar="Failed to fetch Car Details";
+
+//e-reciept page str
+const String eRecieptStr="E-Reciept";
+const String carNameStr="Car";
+const String seatsStr="Seats";
+const String downloadStr="Download";
+
+//profile page str
+const String profileStr="Profile";
