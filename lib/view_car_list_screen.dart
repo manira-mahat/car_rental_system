@@ -1,6 +1,8 @@
 import 'package:car_rental_system/core/util/color_utils.dart';
 import 'package:car_rental_system/core/util/dialog_box.dart';
 import 'package:car_rental_system/core/util/display_snackbar.dart';
+import 'package:car_rental_system/core/util/route_const.dart';
+import 'package:car_rental_system/core/util/route_generator.dart';
 import 'package:car_rental_system/core/util/spin_kit.dart';
 import 'package:car_rental_system/core/util/string_utils.dart';
 import 'package:car_rental_system/model/car.dart';
@@ -368,8 +370,9 @@ class _ViewCarListScreenState extends State<ViewCarListScreen> {
                                           children: [
                                             CustomNoBorderIconButton(
                                               onPressed: () {
-                                                DisplaySnackbar.show(context,
-                                                    carsList[index].id!);
+                                                RouteGenerator.navigateToPage(context, Routes.addCarDetailsRoute,arguments: carsList[index]);
+                                                // DisplaySnackbar.show(context,
+                                                //     carsList[index].id!);
                                               },
                                               icon: Icons.edit,
                                               iconButtonColor: Colors.lightBlue,

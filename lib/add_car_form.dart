@@ -15,7 +15,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
 class AddCarForm extends StatefulWidget {
-  const AddCarForm({super.key});
+  Car? car;
+   AddCarForm({super.key,this.car});
 
   @override
   State<AddCarForm> createState() => _AddCarFormState();
@@ -36,6 +37,19 @@ class _AddCarFormState extends State<AddCarForm> {
   bool loader = false;
   // Global key for form validation
   final _formKey = GlobalKey<FormState>();
+
+  @override
+  void initState() {
+ if(widget.car!=null){
+  _carNameController.text=widget.car?.carName ?? "";
+  _carBrandController.text=widget.car?.carBrand ?? "";
+  _carTypeController.text=widget.car?.carType ?? "";
+  _passengerCapacityController.text=widget.car?.passengerCapacity ?? "";
+  _fuelCapacityController.text=widget.car?.fuelCapacity ?? "";
+  _priceController.text=widget.car?.rentPrice ?? "";
+ }
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -185,7 +199,14 @@ class _AddCarFormState extends State<AddCarForm> {
                     });
                     HideKeyboard.hideKeyboard(context);
                     Future.delayed(Duration(seconds: 2),()async{
-                      Car obj= Car(carName: _carNameController.text);
+                      Car obj= Car(
+                        carName: _carNameController.text, 
+                        carBrand: _carBrandController.text, 
+                        carType: _carTypeController.text,
+                        passengerCapacity: _passengerCapacityController.text,
+                        fuelCapacity: _fuelCapacityController.text,
+                        rentPrice: _priceController.text
+                        );
                     //   var carDetails = {
                     //   "carName": _carNameController.text,
                     //   "carBrand": _carBrandController.text,

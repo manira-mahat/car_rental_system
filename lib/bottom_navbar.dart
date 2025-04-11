@@ -32,7 +32,7 @@ class _BottomNavbar1State extends State<BottomNavbar1> {
 
   List<Widget> widgets = [
     const Home(),
-    const AddCarForm(),
+     AddCarForm(),
     const ChatPage(),
     const ProfilePage(),
   ];

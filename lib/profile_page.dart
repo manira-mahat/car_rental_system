@@ -33,7 +33,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   padding: const EdgeInsets.only(top: 15.0, bottom: 12),
                   child: CircleAvatar(
                     radius: 60,
-                    child: CustomImageAssets(name: profileLogoPath),
+                    backgroundImage: AssetImage(profileLogoPath),
                   ),
                 ),
                 CustomText(
@@ -51,7 +51,9 @@ class _ProfilePageState extends State<ProfilePage> {
                 CustomProfileOptionsButton(
                   icon: Icons.add_box_rounded,
                   data: addCarDetailsStr,
-                  onPressed: () {},
+                  onPressed: () {
+                    RouteGenerator.navigateToPage(context, Routes.addCarDetailsRoute);
+                  },
                 ),
                 CustomProfileOptionsButton(
                   icon: FontAwesomeIcons.car,
