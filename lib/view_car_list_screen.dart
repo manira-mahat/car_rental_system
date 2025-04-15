@@ -75,6 +75,8 @@ class _ViewCarListScreenState extends State<ViewCarListScreen> {
     }
   }
 
+  
+
   Future<bool> deleteCarDetailsById(String docId) async {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
     try {

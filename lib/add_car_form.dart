@@ -218,9 +218,18 @@ class _AddCarFormState extends State<AddCarForm> {
                     // };
                     // print(carDetails);
                     try {
-                      FirebaseFirestore firebaseFirestore =
-                          FirebaseFirestore.instance;
-                     await firebaseFirestore.collection("cars").add(obj.toJson());
+                     FirebaseFirestore firebaseFirestore =
+                            FirebaseFirestore.instance;
+                        if (widget.car != null && widget.car?.id != null) {
+                          await firebaseFirestore
+                              .collection("cars")
+                              .doc(widget.car?.id!)
+                              .update(obj.toJson());
+                        } else {
+                          await firebaseFirestore
+                              .collection("cars")
+                              .add(obj.toJson());
+                        }
                       setState(() {
                         loader=false;
                       });

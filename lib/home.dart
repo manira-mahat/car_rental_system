@@ -240,6 +240,9 @@ TopBrandCars(
                           numberOfPeople: carsList[index].passengerCapacity ?? "",
                           price: carsList[index].rentPrice ?? "",
                           onPressed: (){
+                             RouteGenerator.navigateToPage(
+                              context, Routes.carDetailsRoute,
+                              arguments: carsList[index]);
 
                           },
 );
