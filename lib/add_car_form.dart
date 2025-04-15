@@ -120,6 +120,7 @@ class _AddCarFormState extends State<AddCarForm> {
                   // Car Type Field
                   Expanded(
                     child: CustomDropdown(
+                     value: _carTypeController.text,
                       dropDownItemList: carType,
                       labelText: carTypeLabelStr,
                       hintText: carTypeHintStr,

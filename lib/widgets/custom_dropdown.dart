@@ -9,6 +9,7 @@ class CustomDropdown extends StatefulWidget {
   String? hintText;
   Widget? suffixIcon;
   Widget? prefixIcon;
+    String? value;
   TextEditingController? controller;
   String? Function(String?)? validator;
   CustomDropdown(
@@ -20,7 +21,8 @@ class CustomDropdown extends StatefulWidget {
       this.suffixIcon,
       this.prefixIcon,
       this.controller,
-      this.validator});
+      this.validator,
+      this.value});
 
   @override
   State<CustomDropdown> createState() => _CustomDropdownState();
@@ -51,7 +53,8 @@ class _CustomDropdownState extends State<CustomDropdown> {
           ),
           const SizedBox(height: 10),
           DropdownButtonFormField(
-              dropdownColor: primaryColor,
+               value: widget.value != null && widget.dropDownItemList.contains(widget.value) ? widget.value : null,
+              dropdownColor: greyColor,
               focusNode: _focusNode,
               decoration: InputDecoration(
                   focusedBorder: const OutlineInputBorder(
