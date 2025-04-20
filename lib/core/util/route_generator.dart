@@ -6,6 +6,7 @@ import 'package:car_rental_system/get_started.dart';
 import 'package:car_rental_system/home.dart';
 import 'package:car_rental_system/login.dart';
 import 'package:car_rental_system/model/car.dart';
+import 'package:car_rental_system/notification_page.dart';
 import 'package:car_rental_system/signup.dart';
 import 'package:car_rental_system/exampleeee.dart';
 import 'package:car_rental_system/view_car_list_screen.dart';
@@ -50,6 +51,8 @@ class RouteGenerator {
       return MaterialPageRoute(builder: (_)=> const ViewCarListScreen() );
       case Routes.carDetailsRoute:
       return MaterialPageRoute(builder: (_) => const CarDetailsPage());
+        case Routes.notificationRoute:
+      return MaterialPageRoute(builder: (_) => const NotificationPage());
       default:
 
         return MaterialPageRoute(

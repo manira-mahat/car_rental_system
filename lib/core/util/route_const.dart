@@ -12,4 +12,5 @@ static const homeRoute="/home";
 static const addCarDetailsRoute="/addCarDetails";
 static const viewCarListRoute="/viewCarList";
   static const carDetailsRoute = "/carDetails";
+  static const notificationRoute = "/notification";
 }
