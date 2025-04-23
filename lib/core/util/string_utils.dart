@@ -13,6 +13,7 @@ const String registerStr="Register";
 const String createAccountStr="Create Account";
 const String alreadyHaveAccountStr="Already have an account? ";
 const String loginStr="Login";
+const String forgotPasswordStr="Forgot Password";
 
 const String nameStr="Name";
 const String namePlaceStr="Enter your name";

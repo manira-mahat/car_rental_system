@@ -2,6 +2,8 @@ import 'package:car_rental_system/add_car_form.dart';
 import 'package:car_rental_system/bottom_navbar.dart';
 import 'package:car_rental_system/car_details_page.dart';
 import 'package:car_rental_system/core/util/route_const.dart';
+import 'package:car_rental_system/enter_otp.dart';
+import 'package:car_rental_system/forgot_password.dart';
 import 'package:car_rental_system/get_started.dart';
 import 'package:car_rental_system/home.dart';
 import 'package:car_rental_system/login.dart';
@@ -35,6 +37,11 @@ class RouteGenerator {
     switch (settings.name) {
       case Routes.loginRoute:
         return MaterialPageRoute(builder: (_) => const Login());
+          case Routes.forgotPasswordRoute:
+        return MaterialPageRoute(builder: (_) => const ForgotPassword());
+        case Routes.enterOtpRoute:
+        return MaterialPageRoute(builder: (_) => const  EnterOtp());
+
       case Routes.signupRoute:
         return MaterialPageRoute(builder: (_) => const Signup());
       // case Routes.roleSelectionRoute:

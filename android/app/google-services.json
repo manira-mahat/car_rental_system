@@ -12,7 +12,20 @@
           "package_name": "com.manira.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "339901482541-kiklt3dsls99aq63d0ku6qhuftar1thk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.manira.app",
+            "certificate_hash": "1db15a8d85a58656d3c4248df859235a4edc34d4"
+          }
+        },
+        {
+          "client_id": "339901482541-hgnanjggc9eaq6gtfk1osrnduo78m1ou.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDyHybOY7A5a555WosratlkOl1zdZX8kfo"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "339901482541-hgnanjggc9eaq6gtfk1osrnduo78m1ou.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "339901482541-12t7fn4tvlfu1rusih94ls6ohdiknr3m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.manira.app"
+              }
+            }
+          ]
         }
       }
     }

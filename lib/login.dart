@@ -110,11 +110,17 @@ class _LoginState extends State<Login> {
                       fontWeight: FontWeight.bold,
                     ),
                     Spacer(),
-                    CustomText(
-                      data: forgetPasswordStr,
-                      fontSize: 15,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.red,
+                    CustomInkwell(
+                      onTap: () {
+                        RouteGenerator.navigateToPage(
+                            context, Routes.forgotPasswordRoute);
+                      },
+                      child: CustomText(
+                        data: forgetPasswordStr,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red,
+                      ),
                     ),
                   ],
                 ),

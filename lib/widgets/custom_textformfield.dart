@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class CustomTextformfield extends StatelessWidget {
   String? labelText;
-    String? hintText;
+  String? hintText;
   Widget? suffixIcon;
   Widget? prefixIcon;
   bool? obscureText;

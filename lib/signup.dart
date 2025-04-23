@@ -57,6 +57,7 @@ class _SignupState extends State<Signup> {
             await auth.signInWithCredential(credential);
 
         user = userCredential.user;
+        print("<-------------------Goggle:${user?.getIdToken()}");
       } on FirebaseAuthException catch (e) {
         if (e.code == 'account-exists-with-different-credential') {
           // handle the error here
@@ -245,6 +246,7 @@ class _SignupState extends State<Signup> {
                   CustomElevatedbutton(
                     onPressed: () async{
                    await signInWithGoogle(context: context);
+                   RouteGenerator.navigateToPage(context, Routes.buttomNavbarRoute);
                     },
                     width: MediaQuery.of(context).size.width * 0.25,
                     backgroundColor: Colors.white,
